@@ -14,7 +14,9 @@ function App() {
         </p>
       </div>
       <div className="cta">
-        <p>Try it free 7 days then $20/mo. thereafter</p>
+        <p>
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </p>
       </div>
       <Form />
     </div>

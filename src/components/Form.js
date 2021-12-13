@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import cn from "classnames";
+import Input from "./Input";
 
 const inputs = [
   {
@@ -34,7 +34,6 @@ const inputs = [
 ];
 
 const Form = () => {
-  const [isValid, setIsValid] = useState(false);
   const [userData, setUserData] = useState({
     fName: "",
     lName: "",
@@ -42,39 +41,26 @@ const Form = () => {
     password: "",
   });
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-    console.log(event.target);
-    for (let i = 0; i < event.target.length - 1; i++) {
-      const element = event.target[i];
-      console.log(element);
-    }
-  };
-
   const inputHandler = ({ target: { value, name } }) => {
     setUserData((input) => ({ ...input, [name]: value }));
   };
 
   return (
     <div className="card">
-      <form className="signup-form" onSubmit={submitHandler}>
+      <form className="signup-form">
         {inputs.map((input) => (
-          <div
-            className={cn({ "invalid-wrapper": !isValid })}
-            data-input-name={input.placeholder}
-            data-error-message=" cannot be empty"
-          >
-            <input
-              key={input.id}
-              {...input}
-              onChange={inputHandler}
-              value={userData[input.name]}
-            />
-          </div>
+          <Input
+            key={input.id}
+            input={input}
+            onChange={inputHandler}
+            userData={userData}
+          />
         ))}
+
         <button className="signup-form__btn" type="submit">
           Claim your free trial
         </button>
+
         <p className="signup-form__tos">
           By clicking the button, you are agreeing to our{" "}
           <a href="/">Terms and Services</a>

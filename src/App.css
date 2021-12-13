@@ -56,6 +56,13 @@ body {
 .cta p {
   max-width: 60%;
   margin: 0 auto;
+  font-weight: 400;
+  color: var(--neutral-blay);
+}
+
+.cta strong {
+  color: white;
+  font-weight: 600;
 }
 
 .signup-form {
@@ -86,7 +93,7 @@ body {
 }
 
 .invalid-wrapper::before {
-  content: attr(data-input-name) attr(data-error-message);
+  content: attr(data-error-message);
   display: block;
   position: absolute;
   top: 105%;
@@ -107,6 +114,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.invalid-wrapper .signup-input {
+  color: var(--primary-red);
+}
+
 .signup-form__btn {
   background-color: var(--primary-green);
   border-radius: 4px;
@@ -116,6 +127,12 @@ body {
   text-transform: uppercase;
   padding: 0.75rem 2rem;
   cursor: pointer;
+  box-shadow: 0 3px 1px 0px rgba(46, 46, 46, 0.466);
+  transition: opacity 150ms ease-in-out;
+}
+
+.signup-form__btn:hover {
+  opacity: 0.7;
 }
 
 .signup-form__tos {
