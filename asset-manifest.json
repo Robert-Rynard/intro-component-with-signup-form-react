@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/signup-form-react/static/css/main.aac05b60.chunk.css",
+    "main.js": "/signup-form-react/static/js/main.d9fc3b2c.chunk.js",
+    "main.js.map": "/signup-form-react/static/js/main.d9fc3b2c.chunk.js.map",
+    "runtime-main.js": "/signup-form-react/static/js/runtime-main.2d1b6c82.js",
+    "runtime-main.js.map": "/signup-form-react/static/js/runtime-main.2d1b6c82.js.map",
+    "static/js/2.81facb12.chunk.js": "/signup-form-react/static/js/2.81facb12.chunk.js",
+    "static/js/2.81facb12.chunk.js.map": "/signup-form-react/static/js/2.81facb12.chunk.js.map",
+    "static/js/3.7306e41e.chunk.js": "/signup-form-react/static/js/3.7306e41e.chunk.js",
+    "static/js/3.7306e41e.chunk.js.map": "/signup-form-react/static/js/3.7306e41e.chunk.js.map",
+    "index.html": "/signup-form-react/index.html",
+    "static/css/main.aac05b60.chunk.css.map": "/signup-form-react/static/css/main.aac05b60.chunk.css.map",
+    "static/js/2.81facb12.chunk.js.LICENSE.txt": "/signup-form-react/static/js/2.81facb12.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/signup-form-react/static/media/icon-error.b72f792e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d1b6c82.js",
+    "static/js/2.81facb12.chunk.js",
+    "static/css/main.aac05b60.chunk.css",
+    "static/js/main.d9fc3b2c.chunk.js"
+  ]
+}
