@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
-}
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  --accent-clr: hsl(248, 32%, 49%);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  --neutral-blue: hsl(249, 10%, 26%);
+  --neutral-blay: hsl(246, 25%, 77%);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  display: grid;
+  text-align: center;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--primary-red);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#root {
+  display: grid;
+}
+
+.grid {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.info {
+  padding: 2rem 0;
+}
+
+.info__title {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.info__body {
+  max-width: 40rem;
+}
+
+.cta {
+  background-color: var(--accent-clr);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 6px 0px 0px rgba(46, 46, 46, 0.253);
+  max-width: 27.5rem;
+  width: 100%;
+}
+
+.cta p {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 0px 0px rgba(46, 46, 46, 0.253);
+}
+
+.signup-input {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 4px;
+  border: 1px solid hsl(0, 1%, 83%);
+}
+
+.invalid-wrapper {
+  outline: 2px solid var(--primary-red);
+  position: relative;
+  border-radius: 4px;
+}
+
+.invalid-wrapper::before {
+  content: attr(data-input-name) attr(data-error-message);
+  display: block;
+  position: absolute;
+  top: 105%;
+  right: 0;
+  color: var(--primary-red);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.invalid-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  right: 1rem;
+  padding: 1rem;
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+}
+
+.signup-form__btn {
+  background-color: var(--primary-green);
+  border-radius: 4px;
+  border: 0;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+
+.signup-form__tos {
+  color: var(--neutral-blay);
+  font-size: 0.7rem;
+  padding: 0 1rem;
+}
+
+.signup-form__tos a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
   }
-  to {
-    transform: rotate(360deg);
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+    align-content: center;
+    gap: 1rem 0;
+  }
+
+  .info {
+    grid-row: span 2;
+    text-align: left;
+    justify-self: end;
+    align-self: center;
+    max-width: 30rem;
+  }
+
+  .info__title {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  .cta {
+    max-width: 30rem;
+  }
+
+  .cta p {
+    max-width: none;
+  }
+
+  .signup-form {
+    padding: 2rem;
   }
 }
